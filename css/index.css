@@ -1,0 +1,78 @@
+body {
+    background-color: #222;
+}
+nav {
+    background-color: #222;
+}
+
+.navbar-brand {
+    width: 200px;
+    height: auto;
+}
+
+.nav-link {
+    color: rgb(102, 102, 51);
+    font-size: 20px;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: rgb(52, 52, 49);
+    color: white;
+}
+
+#topimagecontainer {
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#topimage {
+    width: 100%;
+    margin: auto;
+    
+}
+
+.row-group {
+    justify-content: space-evenly;
+}
+
+.card
+{
+    background-color: transparent;
+    border: 2px  rgb(102, 102, 51) solid;
+    padding: 20px;
+    width: 275px;
+    border-radius: 20px;
+    color: rgb(102, 102, 51);
+    transition-duration: 0.5s;
+}
+
+.card:hover
+{
+    transform: scale(1.05);
+}
+
+.cardgamebuttons
+{
+    border: none;
+    outline: none;
+    background-color: rgb(102, 102, 51);
+    color: rgb(52, 52, 49);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.notmiddle
+{
+    transform: scale(0.85);
+}
+
+.footercontainer
+{
+    color: rgb(102, 102, 51);
+}

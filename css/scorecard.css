@@ -1,0 +1,53 @@
+body {
+    background-color: #222;
+}
+nav {
+    background-color: #222;
+}
+
+.navbar-brand {
+    width: 200px;
+    height: auto;
+}
+
+.nav-link {
+    color: rgb(102, 102, 51);
+    font-size: 20px;
+    margin: 0px 10px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: rgb(52, 52, 49);
+    color: white;
+}
+
+.containerheading
+{
+    text-align: center;
+}
+
+.display-4
+{
+    color: rgb(102, 102, 51);
+    margin: 20px;
+}
+
+
+.Headers
+{
+    width: 200px;
+    background-color: #222;
+    padding: 10px 0px;
+}
+
+.table
+{
+    background-color: #222;
+    --bs-table-bg: #222;
+    --bs-table-border-color:#222;
+    color: rgb(102, 102, 51);
+    border: 2px solid rgb(102, 102, 51);
+    border-radius: 10px;
+}

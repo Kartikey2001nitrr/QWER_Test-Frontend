@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QWER Test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <img src="images/LOGO.jpg" class="navbar-brand" href="#" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarScroll"
+          data-bs-theme="dark"
+        >
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/scorecard.html">Scorecard</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="rulesbutton">Rules</button>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://learntyping.org/beginner-typing-lesson-1a"
+                >Learn</a
+              >
+            </li>
+            <li class="dropdown nav-item">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More Games
+              </a>
+              <ul class="dropdown-menu nav-item">
+                <li>
+                  <button id="game1" class="dropdown-item gameselectors">
+                    Game 1
+                  </button>
+                </li>
+                <li>
+                  <button id="game2" class="dropdown-item gameselectors">
+                    Game 2
+                  </button>
+                </li>
+                <li>
+                  <button id="game3" class="dropdown-item gameselectors">
+                    Game 3
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle nav-link dropdown-toggle"
+                type="button"
+                id="text_selector"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Harry Potter
+              </button>
+              <ul class="dropdown-menu" id="linktable" aria-labelledby="dropdownMenuButton1">
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Us
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.linkedin.com/in/kartikey-thawait-51583a221"
+                    >Linked in</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://github.com/Kartikey2001nitrr"
+                    >Github</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="toast show"
+      id="rulestoast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-header">
+        <div class="me-lg-auto">Rules</div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="toast-body" id="rules-body">Game 1</div>
+    </div>
+
+    <div class="currentgame container my-5" id="currgame">Game 1</div>
+
+    <div class="container px-4 my-4" id="hanging-icons">
+      <div class="row-group row g-4 row-cols-1 row-cols-lg-5">
+        <div class="col timer">
+          <div class="py-3 timer-inside timer-inside-up">timer</div>
+          <div class="py-3 timer-inside timer-inside-down">
+            <span class="tdigit" id="tmin">2</span>
+            <span class="ttext">min</span>
+            <span class="tdigit" id="tsec">0</span>
+            <span class="ttext">sec</span>
+            <span class="tdigit" id="tcount">0</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="py-3 inside inside-up">word/min</div>
+          <div class="py-3 inside inside-down" id="avgspeed">0</div>
+        </div>
+        <div class="col">
+          <div class="py-3 inside inside-up">errors</div>
+          <div class="py-3 inside inside-down" id="totalmistake">0</div>
+        </div>
+        <div class="col">
+          <div class="py-3 inside inside-up">words</div>
+          <div class="py-3 inside inside-down" id="wordcount">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-4" id="resetandsave">
+      <div class="User_Namediv row container">
+        <input placeholder="UserName(min 6 words)" id="User_Name" class="col"/>
+        <div class="col row resetdiv btn-group">
+          <button class="col resetgroup" id="resetandsavebutton">Save and Reset</button>
+          <button class="col resetgroup" id="resetbutton">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mode-button-container container my-4">
+      <div class="mode-btn-group btn-group">
+        <button type="button" id="mode-btn-1" class="btn mode-btn">
+          30 sec
+        </button>
+        <button
+          type="button"
+          id="mode-btn-2"
+          class="btn mode-btn active-mode-btn"
+        >
+          2 min
+        </button>
+        <button type="button" id="mode-btn-3" class="btn mode-btn">
+          5 min
+        </button>
+      </div>
+    </div>
+
+    
+
+    <div class="container my-4">
+      <div class="container row">
+        <div id="box">
+        </div>
+      </div>
+      <div class="container input row">
+        <input class="col-10" id="writingarea" onpaste="return false" />
+        <button class="col-2" id="stop">Stop!!</button>
+      </div>
+    </div>
+
+    <script src="javascript/ids.js"></script>
+    <script src="javascript/globelvaribles.js"></script>
+    <script src="javascript/routes_text.js"></script>
+    <script src="javascript/routes_savescore.js"></script>
+    <script src="javascript/routes_scorecard.js"></script>
+    <script src="javascript/routes_titles.js"></script>
+    <script src="javascript/updateoutputarea.js"></script>
+    <script src="javascript/decision.js"></script>
+    <script src="javascript/resetandstoparea.js"></script>
+    <script src="javascript/resultupdate.js"></script>
+    <script src="javascript/timer.js"></script>
+    <script src="javascript/modechanger.js"></script>
+    <script src="javascript/countwords.js"></script>
+    <script src="javascript/game1.js"></script>
+    <script src="javascript/game2.js"></script>
+    <script src="javascript/game3.js"></script>
+    <script src="javascript/gameselector.js"></script>
+    <script src="javascript/rules.js"></script>
+    <script src="javascript/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
